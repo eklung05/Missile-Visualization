@@ -1,8 +1,10 @@
 html {
   padding:  30px 50px 75px 100px;
+  font-family: "Be Vietnam Pro", sans-serif;
+  background-color: whitesmoke;
 }
 
-
+/*Navigation bar */
 ul {
   list-style-type: none;
   margin: 0;
@@ -35,7 +37,7 @@ h2 {
 .missiletype {
   border: 3px;
   border-style: solid;
-  border-color: darkslategray;
+  border-color: solid silver;
   padding:  1em;
   font-size: 25px;
   font-weight: bolder;
@@ -49,11 +51,11 @@ h2 {
 /*highlight commentary points for bottom line "so what"*/
 
 .commentary {
-  border-color: darkslategray;
+  border-color: solid black;
   background-color: lightgoldenrodyellow;
   border: 3px;
   border-style: solid;
-  border-color: navy;
+  border-color: solid silver;
   padding: 1em;
 }
 
