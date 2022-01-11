@@ -1,3 +1,10 @@
+
+html {
+  padding:  30px 50px 75px 100px;
+  background-color: whitesmoke;
+  font-family: "Be Vietnam Pro", sans-serif;
+}
+
 ul {
   list-style-type: none;
   margin: 0;
@@ -28,8 +35,4 @@ li a:hover {
 .active {
   background-color: #04AA6D;
   color: white;
-}
-
-html {
-  padding:  25px 50px 75px 100px;
 }
