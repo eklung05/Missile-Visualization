@@ -1,8 +1,11 @@
 html {
   padding:  30px 50px 75px 100px;
+  font-family: "Be Vietnam Pro", sans-serif;
+  background-color: whitesmoke;
+  font-size: 18px;
 }
 
-
+/*Navigation bar */
 ul {
   list-style-type: none;
   margin: 0;
@@ -35,7 +38,7 @@ h2 {
 .missiletype {
   border: 3px;
   border-style: solid;
-  border-color: darkslategray;
+  border-color: solid silver;
   padding:  1em;
   font-size: 25px;
   font-weight: bolder;
@@ -49,11 +52,11 @@ h2 {
 /*highlight commentary points for bottom line "so what"*/
 
 .commentary {
-  border-color: darkslategray;
+  border-color: solid black;
   background-color: lightgoldenrodyellow;
   border: 3px;
   border-style: solid;
-  border-color: navy;
+  border-color: solid silver;
   padding: 1em;
 }
 
@@ -73,4 +76,15 @@ li a:hover {
 .active {
   background-color: #04AA6D;
   color: white;
+}
+.body {
+  background-size: cover;
+  border:  solid darkslategray;
+  background-image: url("/images/backgroundfade.png");
+  background-size: cover;
+  background-color: "lightgray;";
+  text-align: center;
+  width: 950px; height: 350px; padding: 1px;
+}
+
 }
