@@ -43,14 +43,34 @@ li a:hover {
   color: white;
 }
 
-.body {
-  background-size: cover;
-  border:  solid darkslategray;
-  background-image: url("/images/backgroundfade.png");
-  background-size: cover;
-  background-color: "lightgray;";
+
+h2 {
   text-align: center;
-  width: 950px; height: 350px; padding: 1px;
 }
 
+.missiletype {
+  background-size: cover;
+  border:  solid darkslategray;
+  text-align: center;
+  font-size: 30px;
+
+}
+
+.commentary {
+  background-size: cover;
+  background-color: lightgoldenrodyellow;
+  border:  solid darkslategray;
+  text-align: center;
+  font-size: 21px;
+}
+
+.emphasize {
+  font-size: 21px;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.imagesource {
+  font-size: 12px;
+  font-style: italic;
 }

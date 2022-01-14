@@ -1,3 +1,10 @@
+html {
+  padding:  30px 50px 75px 100px;
+  font-family: "Be Vietnam Pro", sans-serif;
+  background-color: whitesmoke;
+  font-size: 18px;
+}
+
 ul {
   list-style-type: none;
   margin: 0;
