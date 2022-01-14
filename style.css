@@ -1,9 +1,10 @@
-
 html {
   padding:  30px 50px 75px 100px;
-  background-color: whitesmoke;
   font-family: "Be Vietnam Pro", sans-serif;
+  background-color: whitesmoke;
+  font-size: 18px;
 }
+/* style list in navigation bar */
 
 ul {
   list-style-type: none;
@@ -28,7 +29,7 @@ li a {
   text-decoration: none;
 }
 
-/* Change the link color to #111 (black) on hover */
+/* Change the link color to #111 (black) on hover over navigation bar */
 li a:hover {
   background-color: #111;
 }
