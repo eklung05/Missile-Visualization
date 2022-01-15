@@ -1,0 +1,64 @@
+---
+title: "Missiles"
+author: "Kate Lungmus"
+date: "1/11/2022"
+output: html_document
+---
+
+
+```{R}
+install.packages("ggridges")
+```
+
+# library
+```{R}
+library(ggridges)
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+library(forcats)
+library("readxl")
+```
+
+#import data
+```{R}
+test.data.KJI <- read_excel("C:\\Users\\eklun\\OneDrive\\Desktop\\School\\API 222A\\data\\testdata1.xlsx")
+test.data.KJU <- read_excel("C:\\Users\\eklun\\OneDrive\\Desktop\\School\\API 222A\\data\\testdata2.xlsx")
+```
+
+#plot data for Kim Jong Il
+```{R}
+test.data.KJI$month <- factor(test.data.KJI$month, levels=c("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"))
+ggplot(test.data.KJI, aes(x = month, y = tests)) + geom_col(color = "#b22222", fill = "#b22222") + 
+  labs (
+      x = "Months from 1984 to April 11, 2012 Aggregated under Kim Jong Il",
+      y = "Number of Missile Tests Conducted",
+      title = "Timing Missile Tests: A North Korean Statecraft Tool",
+      subtitle = "How do Kim Jong Il and Kim Jong Un's testing choices stack up?",
+      caption = "source: CNS North Korea Missile Test Database 1984-2017; open-source news reporting 2017-2022"
+  ) +
+  theme (
+    plot.title = element_text(color = "#940000", size = 20),
+    plot.subtitle = element_text(face = "bold"),
+    plot.caption = element_text(face = "italic", hjust = 0.5)
+  )
+```
+#plot data for Kim Jong Un
+```{R}
+test.data.KJU$month <- factor(test.data.KJU$month, levels=c("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"))
+ggplot(test.data.KJU, aes(x = month, y = tests)) + geom_col(color = "#b22222", fill = "#b22222") + 
+  labs (
+      x = "Months from April 11, 2012 to Present Aggregated under Kim Jong Un",
+      y = "Number of Missile Tests Conducted",
+      title = "Timing Missile Tests: A North Korean Statecraft Tool",
+      subtitle = "How do Kim Jong Il and Kim Jong Un's testing choices stack up?",
+      caption = "source: CNS North Korea Missile Test Database 1984-2017; open-source news reporting 2017-2022"
+  ) +
+  theme (
+    plot.title = element_text(color = "#940000", size = 20),
+    plot.subtitle = element_text(face = "bold"),
+    plot.caption = element_text(face = "italic", hjust = 0.5)
+  )
+```
+
+
