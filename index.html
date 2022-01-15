@@ -6,15 +6,20 @@
   <link href="style.css" rel="stylesheet">
 </head>
 <body>
-<h1> North korean missile tests in data </h1>
 
+<!-- Add navigation bar to fixed position at top of site -->
 <ul>
-  <li><a href="https://eklung05.github.io/Missile-Visualization/index.html">Home</a></li>
-  <li><a href="https://eklung05.github.io/Missile-Visualization/missiles/index.html">Missiles Explained</a></li>
-  <li><a href="https://eklung05.github.io/Missile-Visualization/timelines/index.html">Missile Test and Response Timeline</a></li>
-  <li><a href="https://eklung05.github.io/Missile-Visualization/media-reports/index.html">Media Reports</a></li>
-  <li><a href="https://eklung05.github.io/Missile-Visualization/our-team/index.html">About Us</a></li>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="missiles/index.html">Missiles Explained</a></li>
+  <li><a href="timelines/index.html">Missile Test and Response Timeline</a></li>
+  <li><a href="media-reports/index.html">NK Missile Tests in the Media</a></li>
+  <li><a href="Maps/index.html">Mapping Missile Tests</a></li>
+  <li><a href="our-team/index.html">About Us</a></li>
 </ul>
+
+<h1>North Korea routinely makes headlines with its missile testing program, but how does North Korea use missiles as a means of statecraft?</h1>
+
+<p>This site provides data represented graphically to help convey linkages between domestic events in North Korea, geopolitical events in the UN, US, ROK, and other Pacific nations and North Korea's missile testing timelines.</p>
 
 <!-- A timeline of NK missile tests in the homepage -->
 <iframe title="Frequency of NK Missile Tests by Year (1984 - 2022)" aria-label="Stacked Column Chart" id="datawrapper-chart-KSTEv" src="https://datawrapper.dwcdn.net/KSTEv/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="537">
@@ -24,13 +29,29 @@
 <script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
 </script>
 
-<h2> North Korea routinely makes headlines with its missile testing program, but how does North Korea use missiles as a means of statecraft?</h2>
 
-<p> Here is a graphical representation of North Korea’s exhibition of its strategic rocket forces capability intended to illustrate the linkages between domestic events in North Korea, geopolitical events in the US, UN, Pacific, and Republic of Korea, and North Korea’s responses, retaliations, and provocations.</p>
+<br>
+<p>Missile testing events have increased over time in North Korea, but is that simply because of advancing technology? Statecraft is not diplomacy or military action - it is about managing reality. North Korea conducts highly publicized missile testing of long-range, nuclear capable delivery systems in order to advance its country's interests.</p>
 
-<iframe title="[ Facility Locations of Missile Tests in North Korea ]" aria-label="Map" id="datawrapper-chart-g9GTy" src="https://datawrapper.dwcdn.net/g9GTy/3/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="835"></iframe>
-<script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
- </script>
+<p>For example, as statesmen, Kim Jong Un and his father and predecessor, Kim Jong Il, have not behaved similarly with respect to their missile testing programs. This discrepancy may illuminate what North Korea's changing interests are given other countries' activities.</p>
+
+<img src="/images/KJI.png"><img src="/images/KJU.png">
+<br>
+<br>
+<!-- Load d3.js -->
+<script src="https://d3js.org/d3.v4.js"></script>
+
+<!-- Add 2 buttons -->
+<button onclick="update('var1')">Kim Jong Il</button>
+<button onclick="update('var2')">Kim Jong Un</button>
+
+<!-- Create a div where the graph will take place -->
+<div id="my_dataviz"></div>
+  <svg width="460" height="400"></svg>
+
+
+<p>Navigate through the rest of the site for more information about North Korea's missile testing timelines.</p>
+<br>
 
 </body>
 </html>
