@@ -5,7 +5,7 @@ html {
   font-size: 18px;
 }
 
-/*Navigation bar */
+/* style list in navigation bar */
 ul {
   list-style-type: none;
   margin: 0;
@@ -29,62 +29,48 @@ li a {
   text-decoration: none;
 }
 
-h2 {
-  text-align: center;
-  font-size: 32px;
-}
-
-/* Delineate missile types in paragraphs */
-.missiletype {
-  border: 3px;
-  border-style: solid;
-  border-color: solid silver;
-  padding:  1em;
-  font-size: 25px;
-  font-weight: bolder;
-  text-transform: full-width;
-  text-align: center;
-}
-
-.data {
-  color: darkslategray;
-}
-/*highlight commentary points for bottom line "so what"*/
-
-.commentary {
-  border-color: solid black;
-  background-color: lightgoldenrodyellow;
-  border: 3px;
-  border-style: solid;
-  border-color: solid silver;
-  padding: 1em;
-}
-
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-  align-content: center;
-}
-
-/* Change the link color to #111 (black) on hover */
+/* Change the link color to #111 (black) on hover over navigation bar */
 li a:hover {
   background-color: #111;
+}
+.active {
+  background-color: #04AA6D;
+  color: white;
 }
 
 .active {
   background-color: #04AA6D;
   color: white;
 }
-.body {
-  background-size: cover;
-  border:  solid darkslategray;
-  background-image: url("/images/backgroundfade.png");
-  background-size: cover;
-  background-color: "lightgray;";
+
+
+h2 {
   text-align: center;
-  width: 950px; height: 350px; padding: 1px;
 }
 
+.missiletype {
+  background-size: cover;
+  border:  solid darkslategray;
+  text-align: center;
+  font-size: 30px;
+
+}
+
+.commentary {
+  background-size: cover;
+  background-color: lightgoldenrodyellow;
+  border:  solid darkslategray;
+  text-align: center;
+  font-size: 21px;
+}
+
+.emphasize {
+  font-size: 21px;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.imagesource {
+  font-size: 12px;
+  font-style: italic;
 }
