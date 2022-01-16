@@ -1,14 +1,38 @@
 html {
-  padding:  30px 50px 75px 100px;
+  padding: 0px;
   font-family: "Be Vietnam Pro", sans-serif;
   background-color: #ececec;
   font-size: 18px;
 }
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  position: relative;
+}
+
+.bg{
+  z-index: -999;
+  bottom: 0px;
+  filter: alpha(opacity=50);  
+  -moz-opacity: 0.5;  
+  -ms-opacity: 0.5;  
+  -webkit-opacity: 0.5;  
+  -o-opacity: 0.5;  
+  opacity: 0.5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;    
+  background: url('../images/NORTH-KOREA-HYPERSONIC-MISSILE-LAUNCH.jpeg') ;
+  background-size: 100% 100%;
+}
+
 /* style list in navigation bar */
 ul {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
   overflow: hidden;
   background-color: #333;
   position: fixed;
@@ -37,15 +61,22 @@ li a:hover {
   color: white;
 }
 
+h1 {
+  text-align: center;
+  margin: 50px 0 0 0;
+}
+
+/* timeline */
 .timeline {
   margin: 0 auto;
   max-width: 1100px;
-  padding: 80px;
+  padding: 20px;
   display: grid;
   grid-template-columns: 1fr 3px 1fr;
   font-family: "Fira Sans", sans-serif;
 /* define color of the text */
   color: #15607a;
+
 }
 
 .timeline__component {
@@ -67,10 +98,11 @@ li a:hover {
 .timeline__middle {
   position: relative;
   background: #15607a;
+  z-index: -1;
 }
 
 .timeline__point {
-  position: absolute;
+  position:absolute;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -80,11 +112,11 @@ li a:hover {
   border-radius: 50%;
 }
 
-/* LEAVE TILL LAST */
+/* LEAVE TILL LAST
 .timeline__point--bottom {
   top: initial;
   bottom: 0;
-}
+} */
 
 .timeline__date--right {
   text-align: right;
