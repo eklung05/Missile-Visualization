@@ -1,7 +1,5 @@
-<script>
-
 // set the dimensions and margins of the graph
-var margin = {top: 20, right: 30, bottom: 30, left: 55},
+var margin = {top: 30, right: 30, bottom: 70, left: 60},
     width = 460 - margin.left - margin.right,
     height = 400 - margin.top - margin.bottom;
 
@@ -14,51 +12,71 @@ var svg = d3.select("#my_dataviz")
     .attr("transform",
           "translate(" + margin.left + "," + margin.top + ")");
 
-// Parse the Data
-d3.csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_dataset/5_OneCatSevNumOrdered_wide.csv", function(data) {
+// Initialize the X axis
+var x = d3.scaleBand()
+  .range([ 0, width ])
+  .padding(1);
+var xAxis = svg.append("g")
+  .attr("transform", "translate(0," + height + ")")
 
-  // List of groups = header of the csv files
-  var keys = data.columns.slice(1)
+// Initialize the Y axis
+var y = d3.scaleLinear()
+  .range([ height, 0]);
+var yAxis = svg.append("g")
+  .attr("class", "myYaxis")
 
-  // Add X axis
-  var x = d3.scaleLinear()
-    .domain(d3.extent(data, function(d) { return d.year; }))
-    .range([ 0, width ]);
-  svg.append("g")
-    .attr("transform", "translate(0," + height + ")")
-    .call(d3.axisBottom(x).ticks(5));
 
-  // Add Y axis
-  var y = d3.scaleLinear()
-    .domain([0, 200000])
-    .range([ height, 0 ]);
-  svg.append("g")
-    .call(d3.axisLeft(y));
+// A function that create / update the plot for a given variable:
+function update(selectedVar) {
 
-  // color palette
-  var color = d3.scaleOrdinal()
-    .domain(keys)
-    .range(['#e41a1c','#377eb8','#4daf4a','#984ea3','#ff7f00','#ffff33','#a65628','#f781bf'])
+  // Parse the Data
+  d3.csv("./data-collection/KimLaunch.csv", function(data) {
 
-  //stack the data?
-  var stackedData = d3.stack()
-    .keys(keys)
-    (data)
-    //console.log("This is the stack result: ", stackedData)
+    // X axis
+    x.domain(data.map(function(d) { return d.Month; }))
+    xAxis.transition().duration(1000).call(d3.axisBottom(x))
 
-  // Show the areas
-  svg
-    .selectAll("mylayers")
-    .data(stackedData)
-    .enter()
-    .append("path")
-      .style("fill", function(d) { console.log(d.key) ; return color(d.key); })
-      .attr("d", d3.area()
-        .x(function(d, i) { return x(d.data.year); })
-        .y0(function(d) { return y(d[0]); })
-        .y1(function(d) { return y(d[1]); })
-    )
+    // Add Y axis
+    y.domain([0, d3.max(data, function(d) { return +d[selectedVar] }) ]);
+    yAxis.transition().duration(1000).call(d3.axisLeft(y));
 
-})
+    // variable u: map data to existing circle
+    var j = svg.selectAll(".myLine")
+      .data(data)
+    // update lines
+    j
+      .enter()
+      .append("line")
+      .attr("class", "myLine")
+      .merge(j)
+      .transition()
+      .duration(1000)
+        .attr("x1", function(d) { console.log(x(d.Month)) ; return x(d.Month); })
+        .attr("x2", function(d) { return x(d.Month); })
+        .attr("y1", y(0))
+        .attr("y2", function(d) { return y(d[selectedVar]); })
+        .attr("stroke", "grey")
 
-</script>
+
+    // variable u: map data to existing circle
+    var u = svg.selectAll("circle")
+      .data(data)
+    // update bars
+    u
+      .enter()
+      .append("circle")
+      .merge(u)
+      .transition()
+      .duration(1000)
+        .attr("cx", function(d) { return x(d.Month); })
+        .attr("cy", function(d) { return y(d[selectedVar]); })
+        .attr("r", 8)
+        .attr("fill", "#69b3a2");
+
+
+  })
+
+}
+
+// Initialize plot
+update('var1')
