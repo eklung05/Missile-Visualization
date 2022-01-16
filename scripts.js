@@ -30,10 +30,10 @@ var yAxis = svg.append("g")
 function update(selectedVar) {
 
   // Parse the Data
-  d3.csv("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/barplot_change_data.csv", function(data) {
+  d3.csv("./data-collection/KimLaunch.csv", function(data) {
 
     // X axis
-    x.domain(data.map(function(d) { return d.group; }))
+    x.domain(data.map(function(d) { return d.Month; }))
     xAxis.transition().duration(1000).call(d3.axisBottom(x))
 
     // Add Y axis
@@ -51,8 +51,8 @@ function update(selectedVar) {
       .merge(j)
       .transition()
       .duration(1000)
-        .attr("x1", function(d) { console.log(x(d.group)) ; return x(d.group); })
-        .attr("x2", function(d) { return x(d.group); })
+        .attr("x1", function(d) { console.log(x(d.Month)) ; return x(d.Month); })
+        .attr("x2", function(d) { return x(d.Month); })
         .attr("y1", y(0))
         .attr("y2", function(d) { return y(d[selectedVar]); })
         .attr("stroke", "grey")
@@ -68,7 +68,7 @@ function update(selectedVar) {
       .merge(u)
       .transition()
       .duration(1000)
-        .attr("cx", function(d) { return x(d.group); })
+        .attr("cx", function(d) { return x(d.Month); })
         .attr("cy", function(d) { return y(d[selectedVar]); })
         .attr("r", 8)
         .attr("fill", "#69b3a2");
