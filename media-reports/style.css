@@ -11,6 +11,7 @@ body {
   position: relative;
 }
 
+/* add backgroun image */
 .bg{
   z-index: -999;
   bottom: 0px;
@@ -74,6 +75,7 @@ h1 {
   display: grid;
   grid-template-columns: 1fr 3px 1fr;
   font-family: "Fira Sans", sans-serif;
+
 /* define color of the text */
   color: #15607a;
 
