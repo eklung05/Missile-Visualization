@@ -107,3 +107,7 @@ h1 {
     display: block;
   }
 }
+
+.content{
+  padding: 20px 70px;
+}
