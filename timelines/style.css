@@ -41,6 +41,10 @@ li a:hover {
   color: white;
 }
 
+.content{
+  padding: 20px 70px;
+}
+
 h1 {
   text-align: center;
   margin: 50px 0 0 0;
