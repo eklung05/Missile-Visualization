@@ -64,12 +64,15 @@ h3 {
   color:  #007bb8;
 }
 
-.text-graph #my_dataviz {
-  display: inline-block;
-  vertical-align: middle;
+.text-graph {
+  display: grid;
+  grid-template-columns: 35% 65%;
 }
 
-.text-graph .text {
-  display: inline-block;
-  padding-left: 100px;
+.text {
+  padding-top: 100px;
 } 
+
+.t-button {
+  padding-left: 100px;
+}
