@@ -64,7 +64,6 @@ h3 {
   color:  #007bb8;
 }
 
-<<<<<<< HEAD
 .text-graph {
   display: grid;
   grid-template-columns: 35% 65%;
@@ -76,8 +75,8 @@ h3 {
 
 .t-button {
   padding-left: 100px;
-=======
+}
+
 .content {
   padding: 20px 70px;
->>>>>>> 1d0211fa7497db6040e4adb02fd1a6e0ba051abe
 }
