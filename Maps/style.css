@@ -44,6 +44,29 @@ h1 {
   margin: 0px 0 0 0;
 }
 
+h2 {
+  text-align: center;
+  margin: 0px 0 0 0;
+}
+
 .content{
   padding: 20px 70px;
+}
+
+.bar {
+    fill: #5f89ad;
+}
+        
+.axis {
+    font-size: 13px;
+}
+        
+.axis path,
+.axis line {
+    fill: none;
+    display: none;
+}
+        
+.label {
+    font-size: 13px;
 }
