@@ -63,3 +63,16 @@ h3 {
   font-size: 20px;
   color:  #007bb8;
 }
+
+.text-graph {
+  display: grid;
+  grid-template-columns: 35% 65%;
+}
+
+.text {
+  padding-top: 100px;
+} 
+
+.t-button {
+  padding-left: 100px;
+}
