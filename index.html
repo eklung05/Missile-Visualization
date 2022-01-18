@@ -11,52 +11,65 @@
 <ul>
   <li><a href="index.html">Home</a></li>
   <li><a href="missiles/index.html">Missiles Explained</a></li>
-  <li><a href="timelines/index.html">Missile Test and Response Timeline</a></li>
+  <li><a href="timelines/index.html">Political Analysis</a></li>
   <li><a href="media-reports/index.html">NK Missile Tests in the Media</a></li>
   <li><a href="Maps/index.html">Mapping Missile Tests</a></li>
   <li><a href="our-team/index.html">About Us</a></li>
 </ul>
 
-<h1 style="text-align:center">North Korea routinely makes headlines with its missile testing program, but how does North Korea use missiles as a means of statecraft?</h1>
+  <div class="content">
+    <h1 style="text-align:center">North Korea routinely makes headlines with its missile testing program, but how does North Korea use missiles as a means of statecraft?</h1>
 
-<p>This site provides data represented graphically to help convey linkages between domestic events in North Korea, geopolitical events in the UN, US, ROK, and other Pacific nations and North Korea's missile testing timelines.</p>
+    <p>This site provides data represented graphically to help convey linkages between domestic events in North Korea, geopolitical events in the UN, US, ROK, and other Pacific nations and North Korea's missile testing timelines.</p>
 
-<!-- A timeline of NK missile tests in the homepage -->
-<iframe title="Frequency of NK Missile Tests by Year (1984 - 2022)" aria-label="Stacked Column Chart" id="datawrapper-chart-KSTEv" src="https://datawrapper.dwcdn.net/KSTEv/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="537">
-  
-</iframe>
+    <!-- A histogram of NK missile tests in the homepage -->
 
-<script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
-</script>
+    <iframe title="North Korea Missile Testing Events Surged in the 2010s" aria-label="Stacked Column Chart" id="datawrapper-chart-KSTEv" src="https://datawrapper.dwcdn.net/KSTEv/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="537"></iframe>
+
+    <script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
+    </script>
+
+    <br>
+    <p>Missile testing events have increased over time in North Korea, but is that simply because of advancing technology? Statecraft is not diplomacy or military action - it is about managing reality. For North Korea, public missile capability tests broadcast the desired reality that they are a credible military threat to their adversaries. North Korea conducts highly publicized missile testing of long-range, nuclear capable delivery systems in order to advance its country's interests.</p>
+
+    <h3>Comparing the Kims: How has missile testing policy changed over time? </h3>
+    <p class="subheader">Testing missiles at specific times sends an (inter)national message.</p>
+
+    <div class="t-button">
+    <!-- Add 2 buttons -->
+      <button onclick="update('var1')">Kim Jong Il</button>
+      <button onclick="update('var2')">Kim Jong Un</button>
+    </div>
+
+    <div class="text-graph">
+      <div class="graph">
+        <!-- Create a div where the graph will take place -->
+        <div id="my_dataviz"></div>
+      </div>
+
+      <div class="text">
+        <p>As statesmen, Kim Jong Un and his father and predecessor, Kim Jong Il, have not behaved similarly with respect to their missile testing programs. This discrepancy may illuminate what North Korea's changing interests are given other countries' activities.</p>
+
+        <p> Kim Jong Il and Kim Jong Un have both used missile testing as a statecraft tool, but their timing choices indicate that they are responding to consistent international activities. Both are also known to use missile testing in response to domestic problems, such as the economic downturn following COVID-19, and to provoke neighboring countries at key political moments such as elections.</p>
+      </div>
+    </div>
+
+    <!-- Load d3.js -->
+    <script src="https://d3js.org/d3.v4.js"></script>
 
 
-<br>
-<p>Missile testing events have increased over time in North Korea, but is that simply because of advancing technology? Statecraft is not diplomacy or military action - it is about managing reality. For North Korea, public missile capability tests broadcast the desired reality that they are a credible military threat to their adversaries. North Korea conducts highly publicized missile testing of long-range, nuclear capable delivery systems in order to advance its country's interests.</p>
 
-<h3>Comparing the Kims: How has missile testing policy changed over time? </h3>
-<p class="subheader">Testing missiles at specific times sends an (inter)national message.</p>
 
-<p>As statesmen, Kim Jong Un and his father and predecessor, Kim Jong Il, have not behaved similarly with respect to their missile testing programs. This discrepancy may illuminate what North Korea's changing interests are given other countries' activities.</p>
+    <p class="citation"> The data represented above is open-source from the CNS North Korean missile testing database and media reports from North and South Korea, Japan, and the United States. It is aggregated by month.</p>
 
-<p> Kim Jong Il and Kim Jong Un have both used missile testing as a statecraft tool, but their timing choices indicate that they are responding to consistent international activities. Both are also known to use missile testing in response to domestic problems, such as the economic downturn following COVID-19, and to provoke neighboring countries at key political moments such as elections.</p>
+    <p align="center">Navigate through the rest of the site for more information about North Korea's missile testing timelines.</p>
 
-<!-- Load d3.js -->
-<script src="https://d3js.org/d3.v4.js"></script>
-
-<!-- Add 2 buttons -->
-<button onclick="update('var1')">Kim Jong Il</button>
-<button onclick="update('var2')">Kim Jong Un</button>
-
-<!-- Create a div where the graph will take place -->
-<div id="my_dataviz"></div>
-
-<p class="citation"> The data represented above is open-source from the CNS North Korean missile testing database and media reports from North and South Korea, Japan, and the United States. It is aggregated by month.</p>
-
-<p align="center">Navigate through the rest of the site for more information about North Korea's missile testing timelines.</p>
-
-<br>
+    <br>
+  </div>
 
 </body>
+
 <script src="scripts.js"></script>
+
 </html>
 

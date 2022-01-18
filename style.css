@@ -45,7 +45,7 @@ li a:hover {
 
 h1 {
   text-align: center;
-
+  margin: 50px 0 0 0;
 }
 
 h3 {
@@ -63,4 +63,21 @@ h3 {
 .subheader {
   font-size: 20px;
   color:  #007bb8;
+}
+
+.text-graph {
+  display: grid;
+  grid-template-columns: 35% 65%;
+}
+
+.text {
+  padding-top: 100px;
+} 
+
+.t-button {
+  padding-left: 100px;
+}
+
+.content {
+  padding: 20px 70px;
 }

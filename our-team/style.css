@@ -57,6 +57,7 @@ h1 {
   width: 23%;
   margin-bottom: 16px;
   padding: 0 8px;
+  height: 100px;
 }
 
 .card {
@@ -106,4 +107,8 @@ h1 {
     width: 100%;
     display: block;
   }
+}
+
+.content{
+  padding: 20px 70px;
 }
